@@ -23,24 +23,26 @@
 
 			<div class="input">
 				<label><b>Password:</b></label>
-				<input type="text" name="psw">
+				<input type="password" name="psw">
 			</div>
 			
 			<div class="input">
 				<label><b> Confirm Password:</b></label>
-				<input type="text" name="cpsw">
+				<input type="password" name="cpsw">
 			</div>
 
 			<div class="input">
 				<input type="Submit" name="register" class='btn' value="Add it!">
 			</div>
 			
-			<div class="input">
-				<input type="Submit" name="backup" class='btn' value="Save it!"><a href="backup.php">
-			</div>
+			<p>
 
-			<div class="input"> I am already registered!
-				<input type="Submit" name="login" class='btn' value="Log Me In!"> <a href="login.php">
+  				<a href="backup.php">I want save the World!</a>
+
+  			</p>
+
+			<div class="input">I am yours lost child!
+				<input type="Submit" name="login" class='btn' value="Let Me In!"><a href="login.php"></a> 
 			</div>
 		</form>
 

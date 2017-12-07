@@ -6,7 +6,7 @@
 body{
 	font-size: 120%;
 	width: 100%;
-	background-image: url('wallpaper.jpg');
+	background-image: url('img/wallpaper.jpg');
 	
 	
 }
@@ -36,7 +36,12 @@ body{
 .input_form input[type="text"]{
 	width:100%;
 	padding-right:10px;
+	text-decoration: none;
 	
+}
+.input_form input[type='password']{
+	width: 100%;
+	padding-right: 10px;
 }
 
 .btn{
