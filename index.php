@@ -73,7 +73,7 @@
 
 
 
-    <!-- logged in user information -->
+    <!-- logging in user information -->
 
     <?php  if (isset($_SESSION['username'])) : ?>
 
@@ -82,6 +82,22 @@
     	<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
 
     <?php endif ?>
+
+    <form class="output" method="_GET">
+    <!--video clip-->
+      <div class='video'>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qTSDL94_Y7M" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
+        </iframe>
+
+      </div>
+    
+
+      <div class='info'>
+        <p> Some info </p>
+      </div>
+      
+    </form>
 
 </div>
 
