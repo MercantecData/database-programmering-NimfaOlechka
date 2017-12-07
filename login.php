@@ -21,7 +21,6 @@
   </div>
 
 	 
-
   <form method="post" action="login.php" class="input_form">
 
   	<?php include('errors.php'); ?>
@@ -50,7 +49,7 @@
 
   	<p>
 
-  		Not yet a member? <a href="register.php">Sign up</a>
+  		I want become part of your family!  <a href="register.php">Become a child</a>
 
   	</p>
 
