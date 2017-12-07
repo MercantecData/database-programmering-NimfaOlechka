@@ -62,7 +62,7 @@ if (isset($_POST['register'])) {
 
   	$_SESSION['username'] = $username;
 
-  	$_SESSION['success'] = "You are now logged in";
+  	$_SESSION['success'] = "You are nat home my child";
 
   	header('location: index.php');
 
@@ -104,8 +104,10 @@ if (isset($_POST['login'])) {
 
     
     $query = "SELECT * FROM `users`WHERE `name`= '$username' AND `password`='$password'";
+    //$query2 = "SELECT test.book, test.song FROM 'test' JOIN 'users' ON 'test.nameID'='users.id' WHERE `users.name`= '$username' AND `users.password`='$password'";
 
     $results = mysqli_query($db, $query);
+    //$info=mysqli_query($db,$query2);
 
     if (mysqli_num_rows($results) == 1) {
 
