@@ -126,5 +126,38 @@ if (isset($_POST['login'])) {
 }
 
 
+// BackUp DATABASE
+
+
+if (isset($_POST['backup']))
+{
+    
+  $connect = mysqli_connect('localhost', 'root', '', 'mydb');
+
+  if($connect === false){
+    die ("No connection").mysqli_connect_error();
+  }
+
+// select all from my database
+  $query1 = "SELECT * FROM `users`";
+  $result = mysqli_query($connect,$query1);
+
+//push it to array
+  $json_array= array();
+  while($row = mysqli_fetch_assoc($result))
+  {
+    $json_array[] = $row;
+  }
+
+//encode into json format
+  $json = json_encode($json_array);
+
+//printing result of encoded file on the screen 
+echo $json;
+
+//saving into backup file
+  file_put_contents("myDBBackUp.txt", $json);
+}
+
 
 ?>

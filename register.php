@@ -36,7 +36,7 @@
 			</div>
 			
 			<div class="input">
-				<input type="Submit" name="backup" class='btn' value="Save it!">
+				<input type="Submit" name="backup" class='btn' value="Save it!"><a href="backup.php">
 			</div>
 
 			<div class="input"> I am already registered!
