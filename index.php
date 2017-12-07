@@ -92,11 +92,30 @@
 
       </div>
     
-
+<!--displaying information from other table-->
       <div class='info'>
-        <p> Some info </p>
+        <table class='table'>
+          <tr>
+            <th>Book</th>
+            <th>Song</th>
+          </tr>
+          <? php 
+          if (mysqli_num_rows($info)>0)
+            { while($row = mysqli_fetch_array($info))
+              {
+          ?>
+          <tr>
+            <td><?php echo $row['book']; ?></td>
+            <td><?php echo $row['song']; ?></td>
+          </tr>
+          <? php
+            }
+          }
+          ?>
+          
+        </table>
       </div>
-      
+
     </form>
 
 </div>

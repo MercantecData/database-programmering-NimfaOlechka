@@ -104,7 +104,7 @@ if (isset($_POST['login'])) {
 
     
     $query = "SELECT * FROM `users`WHERE `name`= '$username' AND `password`='$password'";
-    //$query2 = "SELECT test.book, test.song FROM 'test' JOIN 'users' ON 'test.nameID'='users.id' WHERE `users.name`= '$username' AND `users.password`='$password'";
+    //$query2 = "SELECT test.book, test.song FROM 'test' INNER JOIN 'users' ON 'test.nameID'='users.id' WHERE `users.name`= '$username' AND `users.password`='$password'";
 
     $results = mysqli_query($db, $query);
     //$info=mysqli_query($db,$query2);
@@ -114,6 +114,8 @@ if (isset($_POST['login'])) {
       $_SESSION['username'] = $username;
 
       $_SESSION['success'] = "You are at home now my child";
+
+      //$_SESSION['success'] = "$info";
 
       header('location: index.php');
 
