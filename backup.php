@@ -19,6 +19,10 @@
 				<input type="Submit" name="backup" class='btn' value="Save it!">
 			</div>
 		</form>
-
+		<form class="input_form" method="post" action="restore.php">
+			<div class="input">
+				<input type="Submit" name="restore" class='btn' value="Back to roots!">
+			</div>
+		</form>
 	</body>
 </html>
