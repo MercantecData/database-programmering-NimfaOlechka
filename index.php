@@ -59,9 +59,11 @@
 
           <?php 
 
-          	echo $_SESSION['success']; 
+          	echo $_SESSION['success'];
+            echo $_SESSION['info'];
 
           	unset($_SESSION['success']);
+            unset($_SESSION['info']);
 
           ?>
 
@@ -78,6 +80,7 @@
     <?php  if (isset($_SESSION['username'])) : ?>
 
     	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+      <p><?php echo $_SESSION['info']; ?></p>
 
     	<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
 
@@ -100,13 +103,13 @@
             <th>Song</th>
           </tr>
           <? php 
-          if (mysqli_num_rows($info)>0)
-            { while($row = mysqli_fetch_array($info))
+          if (mysqli_num_rows($_SESSION['info'])>0)
+            { while($row = mysqli_fetch_array($_SESSION['info'])
               {
           ?>
           <tr>
-            <td><?php echo $row['book']; ?></td>
-            <td><?php echo $row['song']; ?></td>
+            <td><?php echo $row['Book']; ?></td>
+            <td><?php echo $row['Song']; ?></td>
           </tr>
           <? php
             }
